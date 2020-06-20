@@ -1,0 +1,15 @@
+####################################################
+SpektrumSerialReceiver	KEYWORD1
+####################################################
+begin	KEYWORD2
+update	KEYWORD2
+getChannel	KEYWORD2
+getRXLosses	KEYWORD2
+getBindMode	KEYWORD2
+bindRX	KEYWORD2
+####################################################
+DSM2_22ms	LITERAL1
+DSM2_11ms	LITERAL1
+DSMX_22ms	LITERAL1
+DSMX_11ms	LITERAL1
+####################################################
