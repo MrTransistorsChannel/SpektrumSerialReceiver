@@ -5,6 +5,7 @@
  *      * Up to 20 RC channels available
  *      * Getting RX losses and bind type info
  *      * Binding Spektrum™ Serial Receivers in internal DSM2/DSMX 22ms/11ms modes
+ *      * Automatic packet synchronisation
  * 
  * This source code is based on documentation obtained from:
  * https://www.spektrumrc.com/ProdInfo/Files/Remote%20Receiver%20Interfacing%20Rev%20A.pdf
@@ -13,7 +14,10 @@
  * Created 20 Jun 2020
  * by Ilya Kobets (aka MrTransistor)
  * 
- * Version 1.0
+ * Modified 21 Jun 2020
+ * by Ilya Kobets
+ * 
+ * Version 2.0
  *****************************************************************************************************************************************/
 
 /**** Bind mode constants ****/
@@ -28,9 +32,9 @@ typedef enum Bind_mode{
 /**** Main class ****/
 class SpektrumSerialReceiver{
     public:
-        SpektrumSerialReceiver(int bind_pin = 0);                           // Constructor
-        void begin(HardwareSerial& serial); // Initialization on HardwareSerial port. bind_pin variable should be set to receiver data pin for binding or could be left blank if not using bind functionality
-        void begin(Stream& stream);           // Initialization on Stream object
+        SpektrumSerialReceiver(int bind_pin = 0);           // Constructor
+        void begin(HardwareSerial& serial);                 // Initialization on HardwareSerial port. bind_pin variable should be set to receiver data pin for binding or could be left blank if not using bind functionality
+        void begin(Stream& stream);                         // Initialization on Stream object
         void update();                                      // Getting and parsing data frames
         uint16_t getChannel(uint8_t chnum);                 // Returns value for specified channel
         uint8_t getRXLosses();                              // Returns number of signal losses calculated by Receiver

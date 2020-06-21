@@ -5,6 +5,7 @@
  *      * Up to 20 RC channels available
  *      * Getting RX losses and bind type info
  *      * Binding Spektrum™ Serial Receivers in internal DSM2/DSMX 22ms/11ms modes
+ *      * Automatic packet synchronisation
  * 
  * This source code is based on documentation obtained from:
  * https://www.spektrumrc.com/ProdInfo/Files/Remote%20Receiver%20Interfacing%20Rev%20A.pdf
@@ -13,7 +14,10 @@
  * Created 20 Jun 2020
  * by Ilya Kobets (aka MrTransistor)
  * 
- * Version 1.0
+ * Modified 21 Jun 2020
+ * by Ilya Kobets
+ * 
+ * Version 2.0
  *****************************************************************************************************************************************/
 #include <Arduino.h>
 #include "SpektrumSerialReceiver.h"
