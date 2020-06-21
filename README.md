@@ -8,7 +8,7 @@
 
 <a id="Notes"></a>
 ## Important notes
-* ~~Library should start before turning on your transmitter, otherwise receiver power-up process should be controlled by Arduino pin~~ (_**Fixed in v2.0-rc1**_)
+* ~~Library should start before turning on your transmitter, otherwise receiver power-up process should be controlled by Arduino pin~~ (_**Fixed after v2.0-rc1**_)
 * Binding procedure should be executed before `begin()` method **within 200ms after receiver power-up**. If using Arduino with default bootloader, you should control receiver power-up process from Arduino pin, otherwise bind process will be impossible *(except for Arduino Micro/Leonardo with ATmega32U4)*
   
 ## Usage
