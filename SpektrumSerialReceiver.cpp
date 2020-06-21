@@ -44,7 +44,10 @@ void SpektrumSerialReceiver::update(){
         rxlosses = _stream->read();
         bindMode = _stream->read();
         delay(1);
-        _stream->readBytes(packetData, 14);
+        for(int i = 0; i < 14; i++){
+            if(!_stream->available()) return;
+            packetData[i] = _stream->read();
+        }
     }
     for (int i = 0; i < 7; i++) {
         if(bindMode == DSM2_22ms){
