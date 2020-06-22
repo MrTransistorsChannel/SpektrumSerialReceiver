@@ -46,10 +46,12 @@ class SpektrumSerialReceiver{
 
         int _pin;
 
-        static const uint8_t MASK_1024_CHANID = 0xFC;       // Channel ID and servo position masks for 10 & 11 bit protocols
-        static const uint8_t MASK_2048_CHANID = 0x78;
-        static const uint8_t MASK_1024_SXPOS  = 0x03;
-        static const uint8_t MASK_2048_SXPOS  = 0x07;
+        static const uint8_t MASK_1024_CHANID  = 0xFC;      // Channel ID and servo position masks for 10 & 11 bit protocols
+        static const uint8_t MASK_2048_CHANID  = 0x78;
+        static const uint8_t MASK_XPLUS_CHANID = 0x03;
+        static const uint8_t MASK_1024_SXPOS   = 0x03;
+        static const uint8_t MASK_2048_SXPOS   = 0x07;
+        static const uint8_t MASK_XPLUS_SXPOS  = 0x01;
 
         uint8_t packetData[14];
         uint16_t channelData[20];

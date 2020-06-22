@@ -2,7 +2,7 @@
  * Arduino Library for interfacing to Spektrum™ Serial Receivers.
  * Feature overview:
  *      * Reading 1024/2048 Spektrum™ serial protocols
- *      * Up to 20 RC channels available
+ *      * Up to 12 RC channels + 8 X-plus channels available
  *      * Getting RX losses and bind type info
  *      * Binding Spektrum™ Serial Receivers in internal DSM2/DSMX 22ms/11ms modes
  *      * Automatic packet synchronisation
@@ -58,7 +58,11 @@ void SpektrumSerialReceiver::update(){
             channelData[((packetData[i * 2] & MASK_1024_CHANID) >> 2)] = ((packetData[i * 2] & MASK_1024_SXPOS) << 8) + packetData[i * 2 + 1];
         }
         else{
-            channelData[((packetData[i * 2] & MASK_2048_CHANID) >> 3)] = ((packetData[i * 2] & MASK_2048_SXPOS) << 8) + packetData[i * 2 + 1];
+            if(((packetData[i * 2] & MASK_2048_CHANID) >> 3) < 12)
+                channelData[((packetData[i * 2] & MASK_2048_CHANID) >> 3)] = ((packetData[i * 2] & MASK_2048_SXPOS) << 8) + packetData[i * 2 + 1];
+            else{
+                channelData[(12 + ((packetData[i*2] >> 1) & MASK_XPLUS_CHANID) + 4*(packetData[i*2] >> 7))] = ((packetData[i * 2] & MASK_XPLUS_SXPOS) << 8) + packetData[i * 2 + 1];
+            }
         }
     }
 }
