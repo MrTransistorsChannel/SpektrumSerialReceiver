@@ -8,8 +8,8 @@
  *      * Automatic packet synchronisation
  * 
  * This source code is based on documentation obtained from:
- * https://www.spektrumrc.com/ProdInfo/Files/Remote%20Receiver%20Interfacing%20Rev%20A.pdf
- * "Specification for Spektrum Remote Receiver Interfacing. Enabling Use of Spektrum Remotes in Third-Party Products", Rev A 2016 April 12
+ * https://github.com/SpektrumRC/SpektrumDocumentation/blob/master/Telemetry/Remote%20Receiver%20Interfacing.pdf
+ * "Specification for Spektrum Remote Receiver Interfacing. Enabling Use of Spektrum Remotes in Third-Party Products", Rev G 2019 January 22
  * 
  * Created 20 Jun 2020
  * by Ilya Kobets (aka MrTransistor)
@@ -17,7 +17,7 @@
  * Modified 21 Jun 2020
  * by Ilya Kobets
  * 
- * Version 2.0
+ * Version 2.1
  *****************************************************************************************************************************************/
 #include <Arduino.h>
 #include "SpektrumSerialReceiver.h"
