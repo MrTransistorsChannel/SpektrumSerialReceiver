@@ -41,4 +41,5 @@ void bindRX(Bind_mode mode);                        // Enabling specified bind m
 - [x] Auto-detection of channel resolution
 - [x] Binding in internal DSM2/DSMX 22ms/11ms mode
 - [x] Automatic synchronisation
+- [x] Getting X-Plus™ channels data
 - [ ] Spektrum™ VTX setup feature
