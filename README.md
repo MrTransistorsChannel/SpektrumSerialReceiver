@@ -13,7 +13,7 @@
   
 ## Usage
 This library provides user-friendly constants and data type for bind modes:
-```arduino
+```c++
 /**** Bind mode constants ****/
 typedef enum Bind_mode{
     DSM2_22ms = 0x01,
@@ -25,7 +25,7 @@ typedef enum Bind_mode{
 ```
 ### Methods list
 
-```arduino
+```c++
 void begin(HardwareSerial& serial, int bind_pin=0); // Initialization on HardwareSerial port. bind_pin variable should be set to receiver data pin for binding or could be left blank if not using bind functionality
 void begin(Stream& stream, int bind_pin);           // Initialization on Stream object
 void update();                                      // Getting and parsing data frames
