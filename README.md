@@ -23,7 +23,7 @@ typedef enum Bind_mode{
 };
 /*****************************/
 ```
-### Functions list
+### Methods list
 
 ```arduino
 void begin(HardwareSerial& serial, int bind_pin=0); // Initialization on HardwareSerial port. bind_pin variable should be set to receiver data pin for binding or could be left blank if not using bind functionality
